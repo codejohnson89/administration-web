@@ -4,14 +4,22 @@
     justify-content: center;
 }
 
-.link {
+.primaryLink {
     display: flex;
-flex-direction: row;
-align-items: center;
-padding: 16px;
-gap: 8px;
-border-radius: 9999px;
-width: inherit;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+    gap: 8px;
+    border-radius: 9999px;
+    width: inherit;
+}
+
+.primaryLink a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: #203645;
 }
 
 .link a {
@@ -19,6 +27,7 @@ width: inherit;
     font-size: 14px;
     line-height: 18px;
     color: #203645;
+    text-decoration: none;
 }
 
 .SecondaryNav {
@@ -35,10 +44,6 @@ width: inherit;
     height: 100%;
 }
 
-.navBtn {
-    color: #fcfcfc;
-}
-
 .secondaryNavContainer {
     display: flex;
     gap: 2em;
@@ -46,5 +51,34 @@ width: inherit;
 }
 
 .sublink {
+    color: #FCFCFC;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
     text-transform: capitalize;
+}
+
+.sublink.show .dropdown-menu {
+/* 
+The styles for this will be located in the global css file. Whatever reason it is not targeting the dropdown menu.
+*/
+}
+
+.dropdownItem:hover {
+    background-color: #E3F7FD;
+}
+
+.dropdownItem a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #203645;
+    display: block;
+    width: 100%;
+    clear: both;
+    text-align: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
 }

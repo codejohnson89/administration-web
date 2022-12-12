@@ -1,6 +1,4 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
 import styles from '../header.module.css'
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -54,12 +52,12 @@ export default function SecondaryNav(props:any) {
                                                 <Link className={[styles.sublink, 'nav-link'].join(' ')} href={navItem.link}>{navItem.name}</Link>
                                             </Nav.Item>
                                         :
-                                            <NavDropdown key={navItem.name} title={navItem.name} id={navItem.name}>
+                                            <NavDropdown className={styles.sublink} key={navItem.name} title={navItem.name} id={navItem.name}>
                                                 {
                                                     navItem.sublinks.map((item:any) => {
                                                         return (
-                                                            <NavDropdown.ItemText className="dropdown-item" key={item.label}>
-                                                                <Link className={[styles.sublink].join(' ')} href={item.link}>{item.label}</Link>
+                                                            <NavDropdown.ItemText className={styles.dropdownItem} key={item.label}>
+                                                                <Link className={styles.link} href={item.link}>{item.label}</Link>
                                                             </NavDropdown.ItemText>
                                                         )
                                                     })

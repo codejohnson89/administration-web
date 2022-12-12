@@ -36,7 +36,7 @@ export default function PrimaryNav(props:NavItems) {
                                 props.navigation.map((item, index) => {
                                     return (
                                         
-                                            <Nav.Item key={index} className={[styles.link].join(' ')}>
+                                            <Nav.Item key={index} className={[styles.primaryLink].join(' ')}>
                                                 <Link href={item.link}>
                                                     {item.primaryLink}
                                                 </Link>

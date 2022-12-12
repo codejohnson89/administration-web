@@ -7,6 +7,11 @@
     background-image: none;
 }
 
+.header button:focus {
+    border-color: transparent !important;
+    box-shadow: none;
+}
+
 .header button[aria-expanded="true"] svg {
     transform: rotate(90deg);
     transition: .5s;
