@@ -1,0 +1,21 @@
+{
+    "copyright": " 2022 Heartland Payment Systems, LLC – a Global Payments company. All rights reserved.",
+    "links": [
+        {
+            "link": "About",
+            "url": "/Home/About"
+        },
+        {
+            "link": "Contact Us",
+            "url": "/Home/Contact"
+        },
+        {
+            "link": "FAQ",
+            "url": "/Home/FAQ"
+        },
+        {
+            "link": "Site Version",
+            "url": "/Home/Version"
+        }
+    ]
+}

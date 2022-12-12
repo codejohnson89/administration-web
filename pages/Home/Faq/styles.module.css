@@ -1,0 +1,18 @@
+.header button {
+    background-color: #1362E2 !important;
+    color: #fcfcfc !important;
+}
+
+.header button::after {
+    background-image: none;
+}
+
+.header button[aria-expanded="true"] svg {
+    transform: rotate(90deg);
+    transition: .5s;
+}
+
+.header button[aria-expanded="false"] svg {
+    transform: rotate(0deg);
+    transition: .5s;
+}

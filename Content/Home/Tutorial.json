@@ -1,0 +1,35 @@
+{
+    "generalText": "The ACH Gateway Administration is broken up into two parts, Areas and Sections. There are six areas and there are multiple sections for each area.",
+    "tutorialAreas": [
+        {
+            "heading": "Home",
+            "text": "The Home area provides general information about the website as well as documentation about the sites features.",
+            "image": "/public/icons/0-circle-fill.svg"
+        },
+        {
+            "heading": "Configuration",
+            "text": "The Configuration area is where you can view and configure all aspects of the ACH Gateway. It follows a simple work flow for creating, viewing and editing any object in the system. More details are provided in the tutorial for that area.",
+            "image": "/public/icons/0-circle-fill.svg"
+        },
+        {
+            "heading": "Reporting",
+            "text": "The Reporting area of the website provides reports for all aspects of the system. Right now there are just a handful of reports, so if you have suggestions for additional reports, please let us know.",
+            "image": "/public/icons/0-circle-fill.svg"
+        },
+        {
+            "heading": "Support",
+            "text": "The Support area of the website has functionality related to the long term health and maintenance of the Gateway. It contains features such as ACH Processing Exception management, Invoice management and Log Message lookup.",
+            "image": "/public/icons/0-circle-fill.svg"
+        },
+        {
+            "heading": "Terminal",
+            "text": "The Terminal area contains information and links to pages based around configuring the various platforms that have been built around or otherwise integrated with the Colonnade ACH Gateway.",
+            "image": "/public/icons/0-circle-fill.svg"
+        },
+        {
+            "heading": "Sagacity",
+            "text": "The Sagacity area allows users to manage and/or query the various entities used in account validation.",
+            "image": "/public/icons/0-circle-fill.svg"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "heading": "About",
+    "content": [
+        {
+            "text": "The ACH Gateway Administration Website. A configuration and maintenance site for the Gateway. This website is limited to internal Heartland users and can not be accessed by users that do not have domain credentials. Access to this site is further restricted to protect the confidential nature of the data that is stored within. If you require access to this site, please submit a request to Colonnade Support and detail the need."
+        },
+        {
+            "text": "The information contained within this website is confidential and should be treated as such."
+        }
+    ]
+}

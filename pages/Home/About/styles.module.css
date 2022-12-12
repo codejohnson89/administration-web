@@ -1,0 +1,19 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.link {
+    color: #1362E2;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.title {
+    margin-bottom: 48px;
+}

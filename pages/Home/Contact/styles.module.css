@@ -1,0 +1,14 @@
+
+
+.content {
+    display: flex;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 1em;
+}
+
+.btn {
+    color: #fcfcfc;
+}
