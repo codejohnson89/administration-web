@@ -1,0 +1,8 @@
+.pageHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.headingText {
+    font-size: 32px;
+}

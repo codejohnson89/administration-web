@@ -41,7 +41,7 @@ export const menuItems = [
         subLinks: [
             {
                 name: 'merchants',
-                link: 'merchants',
+                link: '/merchants',
                 subLinksExist: true,
                 ariaControls: false,
                 ariaExpanded: false,
@@ -49,39 +49,39 @@ export const menuItems = [
                     {
                         label: 'Billing Groups',
                         key: 'billing groups',
-                        link: 'Configuration/Merchants/BillingGroup'
+                        link: '/Configuration/Merchants/BillingGroups/'
                     },
                     {
-                        label: 'Billing Group Chain',
-                        key: 'billing group chain',
-                        link: 'Configuration/Merchants/BillingGroupChain'
+                        label: 'Billing Group Chains',
+                        key: 'billing group chains',
+                        link: '/Configuration/Merchants/BillingGroupChains/'
                     },
                     {
                         label: 'Payment Channels',
                         key: 'payment channels',
-                        link: 'Configuration/Merchants/PaymentChannels'
+                        link: '/Configuration/Merchants/PaymentChannels/'
                     },
                     {
                         label: 'Relationship Managers',
                         key: 'relationship managers',
-                        link: 'Configuration/Merchants/RelationshipManagers'
+                        link: '/Configuration/Merchants/RelationshipManagers/'
                     },
                     {
                         label: 'Fee Templates',
                         key: 'fee templates',
-                        link: 'Configuration/Merchants/FeeTemplates'
+                        link: '/Configuration/Merchants/FeeTemplates/'
                     },
                     {
                         label: 'Billing Group Disbursement Hold',
                         key: 'billing group disbursement hold',
-                        link: 'Configuration/Merchants/BillingGroupDisbursementHold'
+                        link: '/Configuration/Merchants/BillingGroupDisbursementHold/'
                     },
                 ]
             },
             {
                 name: 'partners',
                 subLinksExist: false,
-                link: 'Configuration/Partners'
+                link: '/Configuration/Partners'
             },
             {
                 name: 'ODFIs',
@@ -93,17 +93,17 @@ export const menuItems = [
                     {
                         label: 'Bank Expenses',
                         key: 'bank expenses',
-                        link: 'Configuration/ODFIs/BankExpenses'
+                        link: '/Configuration/ODFIs/BankExpenses'
                     },
                     {
                         label: 'Expense Batches',
                         key: 'expense batches',
-                        link: 'Configuration/ODFIs/ExpenseBatches'
+                        link: '/Configuration/ODFIs/ExpenseBatches'
                     },
                     {
                         label: 'Routing Numbers',
                         key: 'routing numbers',
-                        link: 'Configuration/ODFIs/RoutingNumbers'
+                        link: '/Configuration/ODFIs/RoutingNumbers'
                     },
                 ]
             },
@@ -117,7 +117,7 @@ export const menuItems = [
                     {
                         label: 'Support Contacts',
                         key: 'support contacts',
-                        link: 'Configuration/BusinessUnits/SupportContacts'
+                        link: '/Configuration/BusinessUnits/SupportContacts'
                     }
                 ]
             },
@@ -131,24 +131,24 @@ export const menuItems = [
                     {
                         label: 'API Profiles',
                         key: 'api profiles',
-                        link: 'Configuration/Profile/APIProfiles'
+                        link: '/Configuration/Profile/APIProfiles'
                     },
                     {
                         label: 'Heartland Users',
                         key: 'heartland users',
-                        link: 'Configuration/Profile/HeartlandUsers'
+                        link: '/Configuration/Profile/HeartlandUsers'
                     },
                     {
                         label: 'External Users',
                         key: 'external users',
-                        link: 'Configuration/Profile/ExternalUsers'
+                        link: '/Configuration/Profile/ExternalUsers'
                     },
                 ]
             },
             {
                 name: 'system',
                 subLinksExist: false,
-                link: 'Configuration/System'
+                link: '/Configuration/System'
             }
         ]
     },

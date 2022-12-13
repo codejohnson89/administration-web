@@ -1,0 +1,42 @@
+.form {
+    padding: 32px;
+    background: #F0F3F7;
+    border-radius: 12px;
+}
+
+.formFields {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.formInput input {
+    background-color: #FCFCFC;
+    border: 1px solid #ABC6D8;
+    border-radius: 8px;
+}
+
+.formInput label {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #203645;
+}
+
+.legend {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #203645;
+}
+
+.btnContainer {
+    display: flex;
+    gap: .5em;
+}
+
+.formSwitch {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
