@@ -44,7 +44,7 @@ export default function Tutorial(): JSX.Element {
                         data.tutorialAreas.map((item, index) => {
                             return (
                                 <li className={[styles.list].join(' ')} key={item.heading}>
-                                    <div className={[styles.icon, '_' + index].join(' ')}></div>                                       
+                                    <div className={[styles.icon, '_' + `${index + 1}`].join(' ')}></div>                                       
                                     <div className={styles.content}>
                                         <h5 className={styles.heading}>{item.heading}</h5>
                                         <p className={styles.content}>{item.text}</p>

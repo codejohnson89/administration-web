@@ -58,6 +58,10 @@
     text-transform: capitalize;
 }
 
+.sublink:hover {
+    color: #FCFCFC !important;
+}
+
 .sublink.show .dropdown-menu {
 /* 
 The styles for this will be located in the global css file. Whatever reason it is not targeting the dropdown menu.

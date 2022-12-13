@@ -145,10 +145,6 @@ header {
   color: #FCFCFC;
 }
 
-/* .dropdown-toggle::after {
-  display: none;
-} */
-
 .dropdown-menu[data-bs-popper] {
   top: 25px !important;
   border: 1px solid #ABC6D8;
