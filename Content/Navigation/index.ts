@@ -91,6 +91,11 @@ export const menuItems = [
                 ariaExpanded: false,
                 sublinks: [
                     {
+                        label: 'Financial Institution',
+                        key: 'Financial Institution',
+                        link: '/Configuration/ODFIs/FinancialInstitution'
+                    },
+                    {
                         label: 'Bank Expenses',
                         key: 'bank expenses',
                         link: '/Configuration/ODFIs/BankExpenses'
@@ -98,7 +103,7 @@ export const menuItems = [
                     {
                         label: 'Expense Batches',
                         key: 'expense batches',
-                        link: '/Configuration/ODFIs/ExpenseBatches'
+                        link: '/Configuration/ODFIs/ExpenseBatch'
                     },
                     {
                         label: 'Routing Numbers',
@@ -114,6 +119,11 @@ export const menuItems = [
                 ariaControls: false,
                 ariaExpanded: false,
                 sublinks: [
+                    {
+                        label: "Business Units",
+                        key: "business units",
+                        link: "/Configuration/BusinessUnits/BusinessUnits"
+                    },
                     {
                         label: 'Support Contacts',
                         key: 'support contacts',
@@ -131,17 +141,17 @@ export const menuItems = [
                     {
                         label: 'API Profiles',
                         key: 'api profiles',
-                        link: '/Configuration/Profile/APIProfiles'
+                        link: '/Configuration/Profiles/APIProfiles'
                     },
                     {
                         label: 'Heartland Users',
                         key: 'heartland users',
-                        link: '/Configuration/Profile/HeartlandUsers'
+                        link: '/Configuration/Profiles/HeartlandUsers'
                     },
                     {
                         label: 'External Users',
                         key: 'external users',
-                        link: '/Configuration/Profile/ExternalUsers'
+                        link: '/Configuration/Profiles/ExternalUsers'
                     },
                 ]
             },

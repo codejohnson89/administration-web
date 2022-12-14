@@ -1,7 +1,9 @@
+import { PageHeaderWithButton } from "../../../Components/PageHeader";
+
 export default function Partners() {
     return (
         <>
-            <p>Partners page</p>
+            <PageHeaderWithButton header="Partners Index" link="../../../Configuration/Partners/Create" text="Add New Partner"/>
         </>
     )
 }

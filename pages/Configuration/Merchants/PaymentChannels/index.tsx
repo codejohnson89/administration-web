@@ -1,5 +1,5 @@
 import { Button, Form, Row } from "react-bootstrap";
-import { PageHeaderWithButton } from './../../../../Components/PageHeader/index';
+import { PageHeaderWithOutButton } from './../../../../Components/PageHeader/index';
 import { useForm } from "react-hook-form";
 import styles from '../styles.module.css';
 
@@ -12,72 +12,58 @@ export default function BillingGroups():JSX.Element {
     return (
         <>
             <section className="content-wrapper">
-                <PageHeaderWithButton link="../../../Configuration/Merchants/BillingGroups/Create/" text="Add New Billing Group" header="Billing Groups Index"/>
+                <PageHeaderWithOutButton header="Payment Channels Index"/>
                 <Form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-                    <legend className={styles.legend}>Filter Billing Groups By</legend>
+                    <legend className={styles.legend}>Filter Payment Channels By</legend>
                     <div className={styles.formFields}>
                         <Row>
                             <Form.Group className={["col-sm-4", styles.formInput].join(' ')}>
-                                <Form.Label>Legal Name</Form.Label>
-                                <Form.Control className={styles.formInput} type="text" {...register("LegalName")}/>
+                                <Form.Label>Payment Channel Name</Form.Label>
+                                <Form.Control className={styles.formInput} type="text" {...register("PaymentChannelName")}/>
                             </Form.Group>
                             <Form.Group className={["col-sm-4", styles.formInput].join(' ')}>
-                                <Form.Label>Doing Business As</Form.Label>
-                                <Form.Control type="text" {...register("DBA")}/>
+                                <Form.Label>Billing Group Legal Name</Form.Label>
+                                <Form.Control type="text" {...register("BillingGroupLegalName")}/>
                             </Form.Group>
                             <Form.Group className={["col-sm-4", styles.formInput].join(' ')}>
-                                <Form.Label>Heartland MID</Form.Label>
-                                <Form.Control type="text" {...register("HeartlandMID")}/>
-                            </Form.Group>
-                        </Row>
-                        <Row>
-                            <Form.Group className={["col-sm-4", styles.formInput].join(' ')}>
-                                <Form.Label>Sequence Key</Form.Label>
-                                <Form.Control type="text" {...register("SequenceKey")}/>
-                            </Form.Group>
-                            <Form.Group className={["col-sm-4", styles.formInput].join(' ')}>
-                                <Form.Label>City</Form.Label>
-                                <Form.Control type="text" {...register("City")}/>
-                            </Form.Group>
-                            <Form.Group className={["col-sm-4", styles.formInput].join(' ')}>
-                                <Form.Label>State</Form.Label>
-                                <Form.Control type="text" {...register("State")}/>
+                                <Form.Label>Billing Group Business Name</Form.Label>
+                                <Form.Control type="text" {...register("BillingGroupBusinessName")}/>
                             </Form.Group>
                         </Row>
                         <Row>
                             <Form.Group className={["col-sm-4", styles.formInput].join(' ')}>
-                                <Form.Label>Zip Code</Form.Label>
-                                <Form.Control type="text" {...register("ZipCode")}/>
+                                <Form.Label>ACH Display Name</Form.Label>
+                                <Form.Control type="text" {...register("ACHDisplayName")}/>
                             </Form.Group>
                             <Form.Group className={["col-sm-4", styles.formInput].join(' ')}>
-                                <Form.Label>Phone Number</Form.Label>
-                                <Form.Control type="text" {...register("PhoneNumber")}/>
+                                <Form.Label>Transit Routing Number</Form.Label>
+                                <Form.Control type="text" {...register("TransitRoutingNumber")}/>
                             </Form.Group>
                             <Form.Group className={["col-sm-4", styles.formInput].join(' ')}>
-                                <Form.Label>ODFI</Form.Label>
-                                <Form.Control type="text" {...register("odfi")}/>
+                                <Form.Label>DDA Account Number</Form.Label>
+                                <Form.Control type="text" {...register("DDAAccountNumber")}/>
                             </Form.Group>
                         </Row>
                         <Row>
                             <Form.Group className={["col-sm-4", styles.formInput].join(' ')}>
-                                <Form.Label>Are included in the tax reports?</Form.Label>
-                                <Form.Select {...register("TaxReportIncluded")}>
+                                <Form.Label>Partner</Form.Label>
+                                <Form.Select {...register("Partner")}>
                                     <option value="">Any</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
                                 </Form.Select>
                             </Form.Group>
                             <Form.Group className={["col-sm-4", styles.formInput].join(' ')}>
-                                <Form.Label>Have their fees enabled?</Form.Label>
-                                <Form.Select {...register("FeesEnabled")}>
+                                <Form.Label>Business Unit</Form.Label>
+                                <Form.Select {...register("BusinessUnit")}>
                                     <option value="">Any</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
                                 </Form.Select>
                             </Form.Group>
                             <Form.Group className={["col-sm-4", styles.formInput].join(' ')}>
-                                <Form.Label>Have an &apos;Activation Date&apos;?</Form.Label>
-                                <Form.Select {...register("ActivationDate")}>
+                                <Form.Label>Required Bank Account Validation</Form.Label>
+                                <Form.Select {...register("RequiredBankAccountValidation")}>
                                     <option value="">Any</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -86,30 +72,34 @@ export default function BillingGroups():JSX.Element {
                         </Row>
                         <Row>
                             <Form.Group className={["col-sm-4", styles.formInput].join(' ')}>
-                                <Form.Label>Is Terminated?</Form.Label>
+                                <Form.Label>Billing Group Is Terminated</Form.Label>
                                 <Form.Select {...register("Terminated")}>
                                     <option value="">Any</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
                                 </Form.Select>
                             </Form.Group>
+                            <Form.Group className={["col-sm-4", styles.formInput].join(' ')}>
+                                <Form.Label>Accepted SEC Codes</Form.Label>
+                                <Form.Control type="text" {...register("AcceptedSECCodes")}/>
+                            </Form.Group>
+                            <Form.Group className={["col-sm-4", styles.formInput].join(' ')}>
+                                <Form.Label>Payment Channel ID</Form.Label>
+                                <Form.Control type="text" {...register("PaymentChannelID")}/>
+                            </Form.Group>
                         </Row>
                         <Row>
                             <Form.Group className={["col-sm-12", styles.formInput, styles.formSwitch].join(' ')}>
-                                <Form.Label>Show only billing groups with no payment channels</Form.Label>
-                                <Form.Check type="switch" {...register("BillingGroupNoPaymentChannels")}/>
+                                <Form.Label>Show Only Payment Channels with No Active Fees</Form.Label>
+                                <Form.Check type="switch" {...register("ShowOnlyPaymentChannelswithNoActiveFees")}/>
                             </Form.Group>
                             <Form.Group className={["col-sm-12", styles.formInput, styles.formSwitch].join(' ')}>
-                                <Form.Label>Show only billing groups with inactive payment channels</Form.Label>
-                                <Form.Check type="switch" {...register("BillingGroupInactivePaymentChannels")}/>
+                                <Form.Label>Show Only Unapproved Payment Channels</Form.Label>
+                                <Form.Check type="switch" {...register("ShowOnlyUnapprovedPaymentChannels")}/>
                             </Form.Group>
                             <Form.Group className={["col-sm-12", styles.formInput, styles.formSwitch].join(' ')}>
-                                <Form.Label>Show only billing groups with unapproved payment channels</Form.Label>
-                                <Form.Check type="switch" {...register("BillingGroupUnapprovedPaymentChannels")}/>
-                            </Form.Group>
-                            <Form.Group className={["col-sm-12", styles.formInput, styles.formSwitch].join(' ')}>
-                                <Form.Label>Show only billing groups with payment channels with no active fees</Form.Label>
-                                <Form.Check type="switch" {...register("BillingGroupPaymentChannelsNoActiveFees")}/>
+                                <Form.Label>Show Only Inactive Payment Channels</Form.Label>
+                                <Form.Check type="switch" {...register("ShowOnlyInactivePaymentChannels")}/>
                             </Form.Group>
                         </Row>
                         <Row className={styles.btnContainer}>
