@@ -308,12 +308,12 @@ export const menuItems = [
             {
                 name: 'virtual terminal',
                 subLinksExist: false,
-                link: '/VirtualTerminal'
+                link: '/Terminal/VirtualTerminal'
             },
             {
                 name: 'history log',
                 subLinksExist: false,
-                link: '/HistoryLog'
+                link: '/Terminal/HistoryLog'
             }
         ]
     },
