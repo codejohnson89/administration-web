@@ -195,6 +195,10 @@ export const menuItems = [
                         link: '/Support/Consumers/Blacklist'
                     },
                     {
+                        label: 'Consumers',
+                        link: '/Support/Consumers/Consumers'
+                    },
+                    {
                         label: 'Whitelist',
                         link: '/Support/Consumers/Whitelist'
                     },
@@ -245,11 +249,15 @@ export const menuItems = [
                 sublinks: [
                     {
                         label: 'ACH Entry Finder',
-                        link: '/Support/AchFiles/AchEntryFinder'
+                        link: '/Support/ACHFiles/ACHEntryFinder'
+                    },
+                    {
+                        label: 'ACH Files',
+                        link: '/Support/ACHFiles/ACHFiles'
                     },
                     {
                         label: 'ACH Rejects',
-                        link: '/Support/AchFiles/AchRejects'
+                        link: '/Support/ACHFiles/ACHRejects'
                     }
                 ]
             },
@@ -289,6 +297,10 @@ export const menuItems = [
                 link: '/Bulwark',
                 subLinksExist: true,
                 sublinks: [
+                    {
+                        label: 'Bulkwark',
+                        link: '/Support/Bulwark/Bulwark'
+                    },
                     {
                         label: 'Risk Rule Configuration',
                         link: '/Support/Bulwark/RiskRuleConfiguration'
