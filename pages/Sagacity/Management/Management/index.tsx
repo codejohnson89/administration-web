@@ -1,15 +1,15 @@
-import styles from './styles.module.css';
-import { SagacityContent } from './../../Content/Sagacity/SagacityContent';
+import styles from '../../styles.module.css';
+import { ManagementContent } from './../../../../Content/Sagacity/Management/ManagementContent';
 
-export default function SagaCity() {
+export default function Management() {
     return (
         <>
             <section className='content-wrapper'>
-                <h2 className={styles.title}>{SagacityContent.heading}</h2>
-                <p className={styles.contentIntro}>{SagacityContent.introText}</p>
+                <h2 className={styles.title}>{ManagementContent.title}</h2>
+                <p className={styles.contentIntro}>{ManagementContent.introContent}</p>
                 <ul id='tutorial-areas' className={styles.listContainer}>
                     {
-                        SagacityContent.content.map((item: {heading: string, text: string}, index:number) => {
+                        ManagementContent.content.map((item: {heading: string, text: string}, index:number) => {
                             return (
                                 <li className={[styles.list].join(' ')} key={item.heading}>
                                     <div className={[styles.icon, '_' + `${index + 1}`].join(' ')}></div>                                       
@@ -22,7 +22,6 @@ export default function SagaCity() {
                         })
                     }
                 </ul>
-                <p>If you need it for support, you can check the reported <a href="#">Sagacity version information</a></p>
             </section>
         </>
     )
