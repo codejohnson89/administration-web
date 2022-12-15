@@ -339,6 +339,10 @@ export const menuItems = [
                 subLinksExist: true,
                 sublinks: [
                     {
+                        label: 'Management',
+                        link: '/Sagacity/Management/Management'
+                    },
+                    {
                         label: 'Business Units',
                         link: '/Sagacity/Management/BusinessUnits'
                     },
@@ -366,6 +370,10 @@ export const menuItems = [
                 subLinksExist: true,
                 sublinks: [
                     {
+                        label: 'History',
+                        link: '/Sagacity/History/History'
+                    },
+                    {
                         label: 'Bank Accounts',
                         link: '/Sagacity/History/BankAccounts'
                     },
@@ -382,12 +390,12 @@ export const menuItems = [
                         link: '/Sagacity/History/AuthenticationRequests'
                     },
                     {
-                        label: 'Statics',
-                        link: '/Sagacity/History/Statics'
+                        label: 'Statistics',
+                        link: '/Sagacity/History/Statistics'
                     },
                     {
                         label: 'Failed API Calls',
-                        link: '/Sagacity/History/FailedApiCalls'
+                        link: '/Sagacity/History/FailedAPICalls'
                     },
                 ]
             }
