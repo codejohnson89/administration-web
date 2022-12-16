@@ -6,3 +6,7 @@
 .headingText {
     font-size: 32px;
 }
+
+.btn a {
+    color: #fcfcfc !important;
+}

@@ -7,7 +7,7 @@ export function PageHeaderWithButton(props:any) {
         <>
             <div className={styles.pageHeader}>
                 <h2 className={styles.headingText}>{props.header}</h2>
-                <Button>
+                <Button className={styles.btn}>
                     <Link href={props.link}>{props.text}</Link>
                 </Button>
             </div>

@@ -1,9 +1,9 @@
-import Tutorial from './Home/Tutorial'
+import HomePage from "./HomeContent"
 
 export default function Home() {
   return (
     <>
-      <Tutorial />
+      <HomePage />
     </>
   )
 }

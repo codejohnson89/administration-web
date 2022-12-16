@@ -38,6 +38,14 @@ The component is using the useRouter hook to get the current route.
 The component is using the useState hook to set the state of the component.
 The component is using the */
 export default function SecondaryNav(props:any) {
+    let item = null;
+    function CloseDropdown() {
+        item = document.querySelector('.dropdown-menu');
+        console.log(item)
+        item?.classList.remove('show')
+        console.log('running')
+        item = null
+    }
     return (
         <>
             <Navbar className={[styles.SecondaryNav].join(' ')}>
@@ -53,11 +61,12 @@ export default function SecondaryNav(props:any) {
                                             </Nav.Item>
                                         :
                                             <NavDropdown className={styles.sublink} key={navItem.name} title={navItem.name} id={navItem.name}>
+                                                <Navbar.Toggle aria-controls={navItem.name} />
                                                 {
                                                     navItem.sublinks.map((item:any) => {
                                                         return (
                                                             <NavDropdown.ItemText className={styles.dropdownItem} key={item.label}>
-                                                                <Link className={styles.link} href={item.link}>{item.label}</Link>
+                                                                <Link onClick={CloseDropdown} className={styles.link} href={item.link}>{item.label}</Link>
                                                             </NavDropdown.ItemText>
                                                         )
                                                     })

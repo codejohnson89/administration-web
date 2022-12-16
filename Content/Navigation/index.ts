@@ -1,43 +1,47 @@
 export const menuItems = [
     {
         primaryLink: 'Home',
-        link: '/',
+        contentText: 'HomeContent',
+        link: '/HomeContent',
+        isActive: false,
         subLinks: [
             {
                 name: 'tutorial',
                 subLinksExist: false,
-                link: '/Home/Tutorial'
+                link: '/HomeContent/Tutorial'
             },
             {
                 name: 'contact',
                 subLinksExist: false,
-                link: '/Home/Contact'
+                link: '/HomeContent/Contact'
             },
             {
                 name: 'about',
                 subLinksExist: false,
-                link: '/Home/About'
+                link: '/HomeContent/About'
             },
             {
                 name: 'FAQ',
                 subLinksExist: false,
-                link: '/Home/Faq'
+                link: '/HomeContent/Faq'
             },
             {
                 name: 'version',
                 subLinksExist: false,
-                link: '/Home/Version'
+                link: '/HomeContent/Version'
             },
             {
                 name: 'health check',
                 subLinksExist: false,
-                link: '/Home/Healthcheck'
+                link: '/HomeContent/Healthcheck'
             }
         ]
     },
     {
         primaryLink: 'Configuration',
+        contentText: "Configuration",
         link: '/Configuration',
+        isActive: false,
         subLinks: [
             {
                 name: 'merchants',
@@ -164,7 +168,9 @@ export const menuItems = [
     },
      {
         primaryLink: 'Support',
+        contentText: "Support",
         link: '/Support',
+        isActive: false,
         subLinks: [
             {
                 name: 'automation',
@@ -315,7 +321,9 @@ export const menuItems = [
      },
     {
         primaryLink: 'Terminal',
+        contentText: "Terminal",
         link: '/Terminal',
+        isActive: false,
         subLinks: [
             {
                 name: 'virtual terminal',
@@ -331,7 +339,9 @@ export const menuItems = [
     },
     {
         primaryLink: 'Sagacity',
+        contentText: "Sagacity",
         link: '/Sagacity',
+        isActive: false,
         subLinks: [
             {
                 name: 'management',
