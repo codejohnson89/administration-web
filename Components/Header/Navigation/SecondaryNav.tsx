@@ -5,29 +5,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 
-interface NavItems {
-    navigation: {
-        primaryLink: string;
-        link: string;
-        subLinks: ({
-            name: string;
-            link: string;
-            subLinksExist: boolean;
-            ariaControls?: boolean;
-            ariaExpanded?: boolean;
-            sublinks: {
-                label: string;
-                link: string;
-            }[];
-        } | {
-            name: string;
-            subLinksExist: boolean;
-            link: string;
-            sublinks?: undefined;
-        })[];
-    }[]
-}
-
 
 /* The above code is a React component that is being used to render a secondary navigation menu.
 The component is being passed an array of objects that contain the navigation items.

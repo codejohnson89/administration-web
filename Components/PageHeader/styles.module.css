@@ -4,7 +4,10 @@
 }
 
 .headingText {
-    font-size: 32px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px;
+    color: #203645;
 }
 
 .btn a {

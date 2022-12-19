@@ -8,8 +8,6 @@ import PrimaryNav from './Navigation/PrimaryNav';
 import SecondaryNav from './Navigation/SecondaryNav';
 import { useRouter } from 'next/router';
 
-
-
 /**
  * The Header function is a React component that renders the primary navigation and secondary
  * navigation. The secondary navigation is filtered based on the current route.
@@ -22,6 +20,7 @@ export default function Header() {
     let [filteredSubNavItems, setFilteredSubNavItems] = useState<{}[]>([])
 
     useEffect(() => {
+        console.log(router)
          navItems.filter((item) => {
             // The second check for the url route of "/_error" is used to make sure the secondary navigation will load. 
             if(item.link == router.route || router.route == "/_error") {
