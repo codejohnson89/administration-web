@@ -23,8 +23,12 @@ export default function Header() {
         console.log(router)
          navItems.filter((item) => {
             // The second check for the url route of "/_error" is used to make sure the secondary navigation will load. 
-            if(item.link == router.route || router.route == "/_error") {
+            if(item.link.includes(router.route)) {
+                console.log('true')
                 setFilteredSubNavItems(item.subLinks);
+            } else if (router.asPath.includes(item.link)) {
+                console.log('false')
+                setFilteredSubNavItems(item.subLinks)
             }
         })
     })
