@@ -13,3 +13,8 @@
 .btn a {
     color: #fcfcfc !important;
 }
+
+.btnContainer {
+    display: flex;
+    gap: 1em;
+}
