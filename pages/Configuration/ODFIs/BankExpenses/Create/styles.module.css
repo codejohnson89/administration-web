@@ -1,0 +1,41 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form .formContainer {
+    width: 100%;
+}
+
+.formSection {
+    background-color: #F0F3F7;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    justify-content: flex-end;
+    margin-right: 1em;
+}
+
+.formGroup label {
+    text-transform: capitalize;
+}
+
+.formGroup input,
+.formGroup select {
+    max-width: 50%;
+}
+
+.leftside {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}

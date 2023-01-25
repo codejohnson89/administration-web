@@ -201,7 +201,7 @@ export default function Create() {
                                         className={stylesForCreate.formInput} 
                                         type="text"
                                         {...register('AddressLine2', { required: false})}
-                                        isInvalid={errors.AddressLine1 ? true : false}
+                                        isInvalid={errors.AddressLine2 ? true : false}
                                         />
                                 </Form.Group>
                             </div>
@@ -226,7 +226,7 @@ export default function Create() {
                                         isInvalid={errors.States ? true : false}
                                         >
                                         {
-                                            
+                                            <></>
                                         }
                                     </Form.Select>
                                 </Form.Group>

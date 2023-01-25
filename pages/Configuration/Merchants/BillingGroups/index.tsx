@@ -8,6 +8,8 @@ export default function BillingGroups():JSX.Element {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = (data:any) => console.log(data);
 
+    // Create a filter function to filter data from an array and return results
+
 
     return (
         <>
