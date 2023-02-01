@@ -14,8 +14,47 @@ export interface IBillingGroupCreate {
     DateSigned: string; //these need to be updated to represent a date
     ContractEndDate: string; //these need to be updated to represent a date
     SupportContactId: number;
-    States: typeof UnitedStates;
+    StateCode: typeof UnitedStates;
     AddressLine1: string;
     AddressLine2?: string;
     City: string;
+    ZipCode: number;
+    TimeZoneId: number;
+    LegalName: string;
+    LegalAddressSameAsBusiness: boolean;
+    LegalAddressLine1: string;
+    LegalAddressLine2: string;
+    LegalCity: string;
+    LegalStateCode: typeof UnitedStates;
+    LegalZipCode: number;
+    GraylistEnforcementTypeId: number;
+    GraylistExpirationDays: number;
+    GraylistBlockThreshold: number;
+    GraylistIgnoreLeadingZeroes: number;
+    BillingGroupFundingTypeId: number;
+    BatchCloseTime: Date;
+    BusinessDaysUntilDisbursement: number;
+    BusinessDaysToDelayCredits: number;
+    BusinessDaysToDelayRefunds: number;
+    EnableNetDisbursementsAndReturns: number;
+    EnableReinitiation: number;
+    EnableDynamicCompanyName: number;
+    EnableItemizedReturns: number;
+    OverrideCompanyId: number;
+    ExpectedAnnualVolume: number;
+    ExpectedAverageTransactionAmount: number;
+    ExpectedMonthlyTransactionCount: number;
+    DailyBatchProcessingLimit: number;
+    MonthlyBatchProcessingLimit: number;
+    EnableFees: number;
+    SetupFeeAmount: number;
+    MonthlyFeeAmount: number;
+    IsMonthlyFeeMinimum: number;
+    BaseTransactionExpenseRate: number;
+    VerifiedTransactionExpenseRate: number;
+    ReturnExpenseRate: number;
+    UnauthorizedReturnExpenseRate: number;
+    ContactName: string;
+    ContactEmail: string;
+    ContactPhoneNumber: string;
 }

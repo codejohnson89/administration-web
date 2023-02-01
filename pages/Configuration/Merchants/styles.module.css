@@ -10,6 +10,16 @@
     gap: 32px;
 }
 
+.formGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup label {
+    margin: 0;
+    text-transform: capitalize;
+}
+
 .formInput input {
     background-color: #FCFCFC;
     border: 1px solid #ABC6D8;
@@ -39,6 +49,30 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
+}
+
+.formSection {
+    background-color: #F0F3F7;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.formSectionDivider {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.OCID {
+    display: flex;
+    align-items: flex-end;
+}
+
+.OCID > div {
+    width: 100%;
 }
 
 /* .error {

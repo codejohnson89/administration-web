@@ -20,7 +20,7 @@ export default function BillingGroups():JSX.Element {
                     <div className={styles.formFields}>
                         <Row>
                             <Form.Group className={["col-sm-4", styles.formInput].join(' ')}>
-                                <Form.Label>Legal Name</Form.Label>
+                                <Form.Label className={styles.formLabel}>Legal Name</Form.Label>
                                 <Form.Control className={styles.formInput} type="text" {...register("LegalName")}/>
                             </Form.Group>
                             <Form.Group className={["col-sm-4", styles.formInput].join(' ')}>
