@@ -2,6 +2,12 @@ import { Button, Form, Row } from "react-bootstrap";
 import { PageHeaderWithButton } from './../../../../Components/PageHeader/index';
 import { useForm } from "react-hook-form";
 import styles from '../styles.module.css';
+import {Table} from "react-bootstrap";
+
+// This is just a dummy data import to create the table at the bottom of this page
+// Remove this section when we move this repo over to the Colonnade repo and create the actual data request in the getServerSideProps
+import {testData} from '../../../../TestData/data';
+import Link from "next/link";
 
 
 export default function BillingGroups():JSX.Element {
@@ -120,6 +126,39 @@ export default function BillingGroups():JSX.Element {
                         </Row>
                     </div>
                 </Form>
+                <Table striped bordered hover size="sm">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Doing Business As</th>
+                            <th>Legal Name</th>
+                            <th>Heartland MID</th>
+                            <th>Enable Fees</th>
+                            <th>City</th>
+                            <th>State</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            testData.map((data, index) => {
+                                return (
+                                    <tr key={index}>
+                                        <td className="iconContainer">
+                                            <Link href={"../Merchants/BillingGroups/Details/" + data.uid}><i className="bi bi-search"></i></Link>
+                                            <Link href="../../../Configuration/Merchants/PaymentChannels/"><i className="bi bi-window"></i></Link>
+                                        </td>
+                                        <td><Link href={"../Merchants/BillingGroups/Details/" + data.uid}>{data.BusinessName}</Link></td>
+                                        <td>{data.LegalName}</td>
+                                        <td>{data.HeartlandMerchantId}</td>
+                                        <td>{data.EnableFees ? "Yes" : "No"}</td>
+                                        <td>{data.City}</td>
+                                        <td>{data.StateCode}</td>
+                                    </tr>
+                                )
+                            })
+                        }
+                    </tbody>
+                </Table>
             </section>
         </>
     )

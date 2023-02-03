@@ -28,3 +28,9 @@
 ._9 {
     background-image: url('../public/icons/9-circle-fill.svg');
 }
+
+.iconContainer {
+    display: flex;
+    gap: .5em;
+    justify-content: center;
+}

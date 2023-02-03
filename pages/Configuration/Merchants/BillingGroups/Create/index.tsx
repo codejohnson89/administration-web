@@ -12,7 +12,9 @@ import { IBillingGroupCreate } from "../../../../../Utils/Interfaces/Configurati
 /* Creating a form with a bunch of inputs. */
 export default function Create() {
     const { register, handleSubmit, watch, formState: { errors } } = useForm<IBillingGroupCreate>();
-    const onSubmit = (data:IBillingGroupCreate) => console.log(data);
+    const onSubmit = (data:IBillingGroupCreate) => {
+        console.log(data);
+    }
 
     return (
         <>
@@ -370,7 +372,8 @@ export default function Create() {
                                         <Form.Group className={[styles.formGroup].join(' ')}>
                                             <Form.Label>Days Until Expiration</Form.Label>
                                             <Form.Control 
-                                                className={stylesForCreate.formInput} 
+                                                className={stylesForCreate.formInput}
+                                                defaultValue="180" 
                                                 type="number"
                                                 {...register('GraylistExpirationDays', { required: false})}
                                                 isInvalid={errors.GraylistExpirationDays ? true : false}
@@ -383,6 +386,7 @@ export default function Create() {
                                             <Form.Control 
                                                 className={stylesForCreate.formInput} 
                                                 type="number"
+                                                defaultValue="2"
                                                 {...register('GraylistBlockThreshold', { required: false})}
                                                 isInvalid={errors.GraylistBlockThreshold ? true : false}
                                                 />
@@ -606,6 +610,7 @@ export default function Create() {
                                             <Form.Control 
                                                 className={stylesForCreate.formInput} 
                                                 type="number"
+                                                defaultValue={0.0800}
                                                 {...register('BaseTransactionExpenseRate', { required: false})}
                                                 isInvalid={errors.BaseTransactionExpenseRate ? true : false}
                                                 />
@@ -617,6 +622,7 @@ export default function Create() {
                                             <Form.Control 
                                                 className={stylesForCreate.formInput} 
                                                 type="number"
+                                                defaultValue={0.25}
                                                 {...register('VerifiedTransactionExpenseRate', { required: false})}
                                                 isInvalid={errors.VerifiedTransactionExpenseRate ? true : false}
                                                 />

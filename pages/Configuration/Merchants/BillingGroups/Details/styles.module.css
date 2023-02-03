@@ -1,0 +1,38 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form .formContainer {
+    width: 100%;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.formGroup label {
+    text-transform: capitalize;
+}
+
+.formGroup input,
+.formGroup select {
+    max-width: 50%;
+}
+
+.leftside {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.reverse input {
+    flex-direction: row;
+    justify-content: space-between;
+    border-left: 1px solid;
+}
+
+
