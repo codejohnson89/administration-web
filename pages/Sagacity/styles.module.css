@@ -75,3 +75,8 @@
     flex-direction: row-reverse;
     justify-content: flex-end;
 }
+
+.link{
+    color:#0d6efd;
+    text-decoration: underline;
+}

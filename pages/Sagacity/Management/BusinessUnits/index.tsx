@@ -1,7 +1,8 @@
-import { Button, Form, Row } from "react-bootstrap";
+import { Button, Form, Row, Table } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { PageHeaderWithButton } from "../../../../Components/PageHeader";
 import styles from '../../styles.module.css';
+import Link from "next/link";
 
 
 export default function BusinessUnits():JSX.Element {
@@ -12,7 +13,7 @@ export default function BusinessUnits():JSX.Element {
     return (
         <>
             <section className="content-wrapper">
-                <PageHeaderWithButton header="Business Units Index" link="/" text="Add New Business Unit"/>
+                <PageHeaderWithButton header="Business Units Index" link="BusinessUnits/create" text="Add New Business Unit"/>
                 <Form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
                     <legend className={styles.legend}>Filter Business Units By</legend>
                     <div className={styles.formFields}>
@@ -25,6 +26,29 @@ export default function BusinessUnits():JSX.Element {
                         <Row className={styles.btnContainer}>
                             <Button className="col-sm-2" type="submit">Filter</Button>
                             <Button className="col-sm-2" type="button">Clear</Button>
+                        </Row>
+                        <Row>
+                            <Table striped bordered hover>
+                                <thead>
+                                    <tr>
+                                        <th>Business Unit</th>
+                                        <th>Risk Tolerance</th>
+                                        <th>Created Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th><Link className={styles.link} href={{pathname: "BusinessUnits/details"}}>The Giants</Link></th>
+                                        <th>Low</th>
+                                        <th>9/25/2015 10:29:24 AM -05.00</th>
+                                    </tr>
+                                    <tr>
+                                        <th><Link className={styles.link} href={{pathname: "BusinessUnits/details"}}>The Patriots</Link></th>
+                                        <th>Low</th>
+                                        <th>9/25/2015 10:29:24 AM -05.00</th>
+                                    </tr>
+                                </tbody>
+                            </Table>
                         </Row>
                     </div>
                 </Form>
