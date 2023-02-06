@@ -22,7 +22,7 @@ export default function Details() {
     const id:any = route.query.id
     return (
         <>
-            <PageHeaderWithButton header={"Details For " + testData[id - 1].BusinessName} link={"../../../../Configuration/Merchants/BillingGroups/Edit/" + id} text="Edit"/>
+            <PageHeaderWithButton header={"Details For " + testData[1].BusinessName} link={"../../../../Configuration/Merchants/BillingGroups/Edit/" + id} text="Edit"/>
             <Form className={stylesForCreate.form}>
             <div className={[stylesForCreate.formContainer].join(' ')}>
                 <div className={[stylesForCreate.leftside].join(' ')}>
@@ -34,13 +34,13 @@ export default function Details() {
                             <div className="form-item col-sm-4">
                                 <Form.Group className={[styles.formGroup].join(' ')}>
                                     <Form.Label>doing business as</Form.Label>
-                                    <Form.Text>{testData[id - 1].BusinessName}</Form.Text>
+                                    <Form.Text>{testData[1].BusinessName}</Form.Text>
                                 </Form.Group>
                             </div>
                             <div className="form-item col-sm-4">
                             <Form.Group className={[styles.formGroup].join(' ')}>
                                 <Form.Label>heartland MID</Form.Label>
-                                <Form.Text>{testData[id - 1].HeartlandMerchantId}</Form.Text>
+                                <Form.Text>{testData[1].HeartlandMerchantId}</Form.Text>
                             </Form.Group>
                             {errors.BusinessName && <FormError errorText="The Heartland MID field is required."/>}
                             </div>
@@ -56,7 +56,7 @@ export default function Details() {
                             <div className="form-item col-sm-4">
                                 <Form.Group className={[styles.formGroup].join(' ')}>
                                     <Form.Label>Sequence Key</Form.Label>
-                                    <Form.Text>{testData[id - 1].SequenceKey}</Form.Text>
+                                    <Form.Text>{testData[1].SequenceKey}</Form.Text>
                                 </Form.Group>
                             </div>
                             <div className="form-item col-sm-4">
@@ -69,7 +69,7 @@ export default function Details() {
                             <div className="form-item col-sm-4">
                                 <Form.Group className={[styles.formGroup].join(' ')}>
                                     <Form.Label>SIC code</Form.Label>
-                                    <Form.Text>{testData[id - 1].StandardIndustrialClassificationCode}</Form.Text>
+                                    <Form.Text>{testData[1].StandardIndustrialClassificationCode}</Form.Text>
                                 </Form.Group>
                             </div>
                         </div>
@@ -91,7 +91,7 @@ export default function Details() {
                             <div className="form-item col-sm-4">
                                 <Form.Group className={[styles.formGroup].join(' ')}>
                                     <Form.Label>Authorized Signor</Form.Label>
-                                    <Form.Text>{testData[id - 1].AuthorizedSignor}</Form.Text>
+                                    <Form.Text>{testData[1].AuthorizedSignor}</Form.Text>
                                 </Form.Group>
                             </div>
                         </div>
@@ -99,13 +99,13 @@ export default function Details() {
                             <div className="form-item col-sm-4">
                                 <Form.Group className={[styles.formGroup].join(' ')}>
                                     <Form.Label>Date Signed</Form.Label>
-                                    <Form.Text>{testData[id - 1].DateSigned}</Form.Text>
+                                    <Form.Text>{testData[1].DateSigned}</Form.Text>
                                 </Form.Group>
                             </div>
                             <div className="form-item col-sm-4">
                                 <Form.Group className={[styles.formGroup].join(' ')}>
                                     <Form.Label>Contract End Date</Form.Label>
-                                    <Form.Text>{testData[id - 1].ContractEndDate}</Form.Text>
+                                    <Form.Text>{testData[1].ContractEndDate}</Form.Text>
                                 </Form.Group>
                             </div>
                             <div className="form-item col-sm-4">
@@ -124,19 +124,19 @@ export default function Details() {
                             <div className="form-item col-sm-4">
                                 <Form.Group className={[styles.formGroup].join(' ')}>
                                     <Form.Label>Address Line 1</Form.Label>
-                                    <Form.Text>{testData[id - 1].AddressLine1}</Form.Text>
+                                    <Form.Text>{testData[1].AddressLine1}</Form.Text>
                                 </Form.Group>
                             </div>
                             <div className="form-item col-sm-4">
                                 <Form.Group className={[styles.formGroup].join(' ')}>
                                     <Form.Label>Address Line 2</Form.Label>
-                                    <Form.Text>{testData[id - 1].AddressLine2}</Form.Text>
+                                    <Form.Text>{testData[1].AddressLine2}</Form.Text>
                                 </Form.Group>
                             </div>
                             <div className="form-item col-sm-4">
                                 <Form.Group className={[styles.formGroup].join(' ')}>
                                     <Form.Label>City</Form.Label>
-                                    <Form.Text>{testData[id - 1].City}</Form.Text>
+                                    <Form.Text>{testData[1].City}</Form.Text>
                                 </Form.Group>
                             </div>
                         </div>
@@ -151,7 +151,7 @@ export default function Details() {
                             <div className="form-item col-sm-4">
                                 <Form.Group className={[styles.formGroup].join(' ')}>
                                     <Form.Label>zip</Form.Label>
-                                    <Form.Text>{testData[id - 1].ZipCode}</Form.Text>
+                                    <Form.Text>{testData[1].ZipCode}</Form.Text>
                                 </Form.Group>
                             </div>
                             <div className="form-item col-sm-4">
@@ -170,19 +170,19 @@ export default function Details() {
                             <div className="form-item col-sm-4">
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>Legal Name</Form.Label>
-                                        <Form.Text>{testData[id - 1].LegalName}</Form.Text>
+                                        <Form.Text>{testData[1].LegalName}</Form.Text>
                                     </Form.Group>
                             </div>
                             <div className="form-item col-sm-4">
                                 <Form.Group className={[styles.formGroup].join(' ')}>
                                     <Form.Label>Address Line 1</Form.Label>
-                                    <Form.Text>{testData[id - 1].LegalAddressLine1}</Form.Text>
+                                    <Form.Text>{testData[1].LegalAddressLine1}</Form.Text>
                                 </Form.Group>
                             </div>
                             <div className="form-item col-sm-4">
                                 <Form.Group className={[styles.formGroup].join(' ')}>
                                     <Form.Label>Address Line 2</Form.Label>
-                                    <Form.Text>{testData[id - 1].LegalAddressLine2}</Form.Text>
+                                    <Form.Text>{testData[1].LegalAddressLine2}</Form.Text>
                                 </Form.Group>
                             </div>
                         </div>
@@ -190,7 +190,7 @@ export default function Details() {
                             <div className="form-item col-sm-4">
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>City</Form.Label>
-                                        <Form.Text>{testData[id - 1].LegalCity}</Form.Text>
+                                        <Form.Text>{testData[1].LegalCity}</Form.Text>
                                     </Form.Group>
                             </div>
                             <div className="form-item col-sm-4">
@@ -203,7 +203,7 @@ export default function Details() {
                             <div className="form-item col-sm-4">
                                 <Form.Group className={[styles.formGroup].join(' ')}>
                                     <Form.Label>zip</Form.Label>
-                                    <Form.Text>{testData[id - 1].LegalZipCode}</Form.Text>
+                                    <Form.Text>{testData[1].LegalZipCode}</Form.Text>
                                 </Form.Group>
                             </div>
                         </div>
@@ -222,13 +222,13 @@ export default function Details() {
                             <div className="form-item col-sm-4">
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>Days Until Expiration</Form.Label>
-                                        <Form.Text>{testData[id - 1].GraylistExpirationDays}</Form.Text>
+                                        <Form.Text>{testData[1].GraylistExpirationDays}</Form.Text>
                                     </Form.Group>
                             </div>
                             <div className="form-item col-sm-4">
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>Account Block Threshold</Form.Label>
-                                        <Form.Text>{testData[id - 1].GraylistBlockThreshold}</Form.Text>
+                                        <Form.Text>{testData[1].GraylistBlockThreshold}</Form.Text>
                                     </Form.Group>
                             </div>
                         </div>
@@ -253,13 +253,13 @@ export default function Details() {
                                 <div className="form-item col-sm-4">
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>Batch Close Time</Form.Label>
-                                        <Form.Text>{testData[id - 1].BatchCloseTime}</Form.Text>
+                                        <Form.Text>{testData[1].BatchCloseTime}</Form.Text>
                                     </Form.Group>
                                 </div>
                                 <div className="form-item col-sm-4">
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>Business Days until Disbursement</Form.Label>
-                                        <Form.Text>{testData[id - 1].BusinessDaysUntilDisbursement}</Form.Text>
+                                        <Form.Text>{testData[1].BusinessDaysUntilDisbursement}</Form.Text>
                                     </Form.Group>
                                 </div>
                             </div>
@@ -267,13 +267,13 @@ export default function Details() {
                                 <div className="form-item col-sm-4">
                                         <Form.Group className={[styles.formGroup].join(' ')}>
                                             <Form.Label>Business Days to Delay Credits</Form.Label>
-                                            <Form.Text>{testData[id - 1].BusinessDaysToDelayCredits}</Form.Text>
+                                            <Form.Text>{testData[1].BusinessDaysToDelayCredits}</Form.Text>
                                         </Form.Group>
                                     </div>
                                 <div className="form-item col-sm-4">
                                         <Form.Group className={[styles.formGroup].join(' ')}>
                                             <Form.Label>Business Days To Delay Refunds</Form.Label>
-                                            <Form.Text>{testData[id - 1].BusinessDaysToDelayRefunds}</Form.Text>
+                                            <Form.Text>{testData[1].BusinessDaysToDelayRefunds}</Form.Text>
                                         </Form.Group>
                                     </div>
                             </div>
@@ -314,19 +314,19 @@ export default function Details() {
                                 <div className="form-item col-sm-4">
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>Expected Annual Volume</Form.Label>
-                                        <Form.Text>{testData[id - 1].ExpectedAnnualVolume}</Form.Text>
+                                        <Form.Text>{testData[1].ExpectedAnnualVolume}</Form.Text>
                                     </Form.Group>
                                 </div>
                                 <div className="form-item col-sm-4">
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>Expected Average Transaction Amount</Form.Label>
-                                        <Form.Text>{testData[id - 1].ExpectedAverageTransactionAmount}</Form.Text>
+                                        <Form.Text>{testData[1].ExpectedAverageTransactionAmount}</Form.Text>
                                     </Form.Group>
                                 </div>
                                 <div className="form-item col-sm-4">
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>Average No. of Transactions per Month</Form.Label>
-                                        <Form.Text>{testData[id - 1].ExpectedMonthlyTransactionCount}</Form.Text>
+                                        <Form.Text>{testData[1].ExpectedMonthlyTransactionCount}</Form.Text>
                                     </Form.Group>
                                 </div>
                             </div>
@@ -334,13 +334,13 @@ export default function Details() {
                                 <div className="form-item col-sm-4">
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>Daily Batch Processing Limit</Form.Label>
-                                        <Form.Text>{testData[id - 1].DailyBatchProcessingLimit}</Form.Text>
+                                        <Form.Text>{testData[1].DailyBatchProcessingLimit}</Form.Text>
                                     </Form.Group>
                                 </div>
                                 <div className="form-item col-sm-4">
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>Monthly Batch Processing Limit</Form.Label>
-                                        <Form.Text>{testData[id - 1].MonthlyBatchProcessingLimit}</Form.Text>
+                                        <Form.Text>{testData[1].MonthlyBatchProcessingLimit}</Form.Text>
                                     </Form.Group>
                                 </div>
                             </div>
@@ -352,13 +352,13 @@ export default function Details() {
                                 <div className="form-item col-sm-4">
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>Setup Fee Amount</Form.Label>
-                                        <Form.Text>{testData[id - 1].SetupFeeAmount}</Form.Text>
+                                        <Form.Text>{testData[1].SetupFeeAmount}</Form.Text>
                                     </Form.Group>
                                 </div>
                                 <div className="form-item col-sm-4">
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>Monthly Fee Amount</Form.Label>
-                                        <Form.Text>{testData[id - 1].MonthlyFeeAmount}</Form.Text>
+                                        <Form.Text>{testData[1].MonthlyFeeAmount}</Form.Text>
                                     </Form.Group>
                                 </div>
                             </div>
@@ -380,19 +380,19 @@ export default function Details() {
                                 <div className="form-item col-sm-4">
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>Base Transaction Expense Rate</Form.Label>
-                                        <Form.Text>{testData[id - 1].BaseTransactionExpenseRate}</Form.Text>
+                                        <Form.Text>{testData[1].BaseTransactionExpenseRate}</Form.Text>
                                     </Form.Group>
                                 </div>
                                 <div className="form-item col-sm-4">
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>Verified Transaction Expense Rate</Form.Label>
-                                        <Form.Text>{testData[id - 1].VerifiedTransactionExpenseRate}</Form.Text>
+                                        <Form.Text>{testData[1].VerifiedTransactionExpenseRate}</Form.Text>
                                     </Form.Group>
                                 </div>
                                 <div className="form-item col-sm-4">
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>Unauthorized Return Expense Rate</Form.Label>
-                                        <Form.Text>{testData[id - 1].UnauthorizedReturnExpenseRate}</Form.Text>
+                                        <Form.Text>{testData[1].UnauthorizedReturnExpenseRate}</Form.Text>
                                     </Form.Group>
                                 </div>
                             </div>
@@ -400,7 +400,7 @@ export default function Details() {
                                 <div className="form-item col-sm-4">
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>Monthly Fee Amount</Form.Label>
-                                        <Form.Text>{testData[id - 1].MonthlyFeeAmount}</Form.Text>
+                                        <Form.Text>{testData[1].MonthlyFeeAmount}</Form.Text>
                                     </Form.Group>
                                 </div>
                             </div>
@@ -412,19 +412,19 @@ export default function Details() {
                                 <div className="form-item col-sm-4">
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>Contact Name</Form.Label>
-                                        <Form.Text>{testData[id - 1].ContactName}</Form.Text>
+                                        <Form.Text>{testData[1].ContactName}</Form.Text>
                                     </Form.Group>
                                 </div>
                                 <div className="form-item col-sm-4">
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>Email Address</Form.Label>
-                                        <Form.Text>{testData[id - 1].ContactEmail}</Form.Text>
+                                        <Form.Text>{testData[1].ContactEmail}</Form.Text>
                                     </Form.Group>
                                 </div>
                                 <div className="form-item col-sm-4">
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>Phone Number</Form.Label>
-                                        <Form.Text>{testData[id - 1].ContactPhoneNumber}</Form.Text>
+                                        <Form.Text>{testData[1].ContactPhoneNumber}</Form.Text>
                                     </Form.Group>
                                 </div>
                             </div>

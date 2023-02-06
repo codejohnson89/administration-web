@@ -2,7 +2,6 @@ import { Button, Form, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { PageHeaderWithButton } from './../../../../../Components/PageHeader/index';
 import styles from '../../styles.module.css';
-import stylesForCreate from './styles.module.css';
 import FormError from "../../../../../Components/FormError";
 import { IFeeTemplate } from "../../../../../Utils/Interfaces/Configuration/Merchants/FeeTemplate/FeeTemplate";
 
@@ -13,16 +12,16 @@ export default function Create() {
     return (
         <>
             <PageHeaderWithButton header="Create Fee Template" link="../../../../Configuration/Merchants/FeeTemplates" text="Cancel"/>
-            <Form onSubmit={handleSubmit(onSubmit)} className={stylesForCreate.form}>
-                <div className={[stylesForCreate.formContainer, "row"].join(' ')}>
-                    <div className={[stylesForCreate.leftside, "col-sm-12"].join(' ')}>
-                        <div className={[stylesForCreate.formSection, "generalInformation"].join(' ')}>
+            <Form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+                <div className={[styles.formContainer, "row"].join(' ')}>
+                    <div className={[styles.leftside, "col-sm-12"].join(' ')}>
+                        <div className={[styles.formSection, "generalInformation"].join(' ')}>
                             <h3>Find Relationship Managers</h3>
                             <div className="form-item">
-                                <Form.Group className={[styles.formInput, stylesForCreate.formGroup].join(' ')}>
+                                <Form.Group className={[ styles.formGroup].join(' ')}>
                                     <Form.Label>name</Form.Label>
                                     <Form.Control 
-                                        className={stylesForCreate.formInput} 
+                                        className={styles.formInput} 
                                         type="text"
                                         {...register('Name', { required: true})}
                                         isInvalid={errors.Name ? true : false}

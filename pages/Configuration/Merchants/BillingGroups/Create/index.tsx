@@ -2,7 +2,6 @@ import { Button, Form, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { PageHeaderWithButton } from './../../../../../Components/PageHeader/index';
 import styles from '../../styles.module.css';
-import stylesForCreate from './styles.module.css';
 import FormError from "../../../../../Components/FormError";
 import { MerchantTypeId } from "../../../../../Utils/Enums/MerchantTypeId";
 import { ODFI } from "../../../../../Utils/Enums/ODFI";
@@ -19,9 +18,8 @@ export default function Create() {
     return (
         <>
             <PageHeaderWithButton header="Add New Billing Group" link="../../../../Configuration/Merchants/BillingGroups" text="Cancel"/>
-            <Form onSubmit={handleSubmit(onSubmit)} className={stylesForCreate.form}>
-                <div className={[stylesForCreate.formContainer].join(' ')}>
-                    <div className={[stylesForCreate.leftside].join(' ')}>
+            <Form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+                <div className={[styles.formContainer].join(' ')}>
                         <div className={[styles.formSection].join(' ')}>
                             <div className={[styles.formSectionDivider, "generalInformation"].join(' ')}>
                             <h3>General Information</h3>
@@ -30,7 +28,7 @@ export default function Create() {
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>doing business as</Form.Label>
                                         <Form.Control 
-                                            className={stylesForCreate.formInput} 
+                                            className={styles.formInput} 
                                             type="text"
                                             {...register('BusinessName', { required: true})}
                                             isInvalid={errors.BusinessName ? true : false}
@@ -42,7 +40,7 @@ export default function Create() {
                                 <Form.Group className={[styles.formGroup].join(' ')}>
                                     <Form.Label>heartland MID</Form.Label>
                                     <Form.Control 
-                                        className={stylesForCreate.formInput} 
+                                        className={styles.formInput} 
                                         type="text"
                                         {...register('HeartlandMerchantId', { required: true})}
                                         isInvalid={errors.HeartlandMerchantId ? true : false}
@@ -54,7 +52,7 @@ export default function Create() {
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>Merchant Type</Form.Label>
                                         <Form.Select 
-                                            className={stylesForCreate.formInput} 
+                                            className={styles.formInput} 
                                             {...register('MerchantTypeId')}
                                             isInvalid={errors.MerchantTypeId ? true : false}
                                             >
@@ -71,7 +69,7 @@ export default function Create() {
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>Sequence Key</Form.Label>
                                         <Form.Control 
-                                            className={stylesForCreate.formInput} 
+                                            className={styles.formInput} 
                                             type="number"
                                             {...register('SequenceKey', {min: 1, max: 2147483647, required: true})}
                                             isInvalid={errors.SequenceKey ? true : false}
@@ -83,7 +81,7 @@ export default function Create() {
                                 <Form.Group className={[styles.formGroup].join(' ')}>
                                     <Form.Label>ODFI</Form.Label>
                                     <Form.Select 
-                                        className={stylesForCreate.formInput} 
+                                        className={styles.formInput} 
                                         {...register('FinancialInstitutionId')}
                                         isInvalid={errors.FinancialInstitutionId ? true : false}
                                         >
@@ -99,7 +97,7 @@ export default function Create() {
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>SIC code</Form.Label>
                                         <Form.Control 
-                                            className={stylesForCreate.formInput} 
+                                            className={styles.formInput} 
                                             type="number"
                                             {...register('StandardIndustrialClassificationCode', { required: true})}
                                             isInvalid={errors.StandardIndustrialClassificationCode ? true : false}
@@ -113,7 +111,7 @@ export default function Create() {
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>Relationship Manager</Form.Label>
                                         <Form.Select 
-                                            className={stylesForCreate.formInput} 
+                                            className={styles.formInput} 
                                             {...register('RelationshipManagerId')}
                                             isInvalid={errors.RelationshipManagerId ? true : false}
                                             >
@@ -129,7 +127,7 @@ export default function Create() {
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>Secondary RM</Form.Label>
                                         <Form.Select 
-                                            className={stylesForCreate.formInput} 
+                                            className={styles.formInput} 
                                             {...register('SecondaryRelationshipManagerId')}
                                             isInvalid={errors.SecondaryRelationshipManagerId ? true : false}
                                             >
@@ -145,7 +143,7 @@ export default function Create() {
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>Authorized Signor</Form.Label>
                                         <Form.Control 
-                                            className={stylesForCreate.formInput} 
+                                            className={styles.formInput} 
                                             type="text"
                                             {...register('AuthorizedSignor', { required: false})}
                                             isInvalid={errors.AuthorizedSignor ? true : false}
@@ -158,7 +156,7 @@ export default function Create() {
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>Date Signed</Form.Label>
                                         <Form.Control 
-                                            className={stylesForCreate.formInput} 
+                                            className={styles.formInput} 
                                             type="date"
                                             {...register('DateSigned', { required: false})}
                                             isInvalid={errors.DateSigned ? true : false}
@@ -169,7 +167,7 @@ export default function Create() {
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>Contract End Date</Form.Label>
                                         <Form.Control 
-                                            className={stylesForCreate.formInput} 
+                                            className={styles.formInput} 
                                             type="date"
                                             {...register('ContractEndDate', { required: false})}
                                             isInvalid={errors.ContractEndDate ? true : false}
@@ -180,7 +178,7 @@ export default function Create() {
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>Support Contact</Form.Label>
                                         <Form.Select 
-                                            className={stylesForCreate.formInput} 
+                                            className={styles.formInput} 
                                             {...register('SupportContactId')}
                                             isInvalid={errors.SupportContactId ? true : false}
                                             >
@@ -198,7 +196,7 @@ export default function Create() {
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>Address Line 1</Form.Label>
                                         <Form.Control 
-                                            className={stylesForCreate.formInput} 
+                                            className={styles.formInput} 
                                             type="text"
                                             {...register('AddressLine1', { required: true})}
                                             isInvalid={errors.AddressLine1 ? true : false}
@@ -210,7 +208,7 @@ export default function Create() {
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>Address Line 2</Form.Label>
                                         <Form.Control 
-                                            className={stylesForCreate.formInput} 
+                                            className={styles.formInput} 
                                             type="text"
                                             {...register('AddressLine2', { required: false})}
                                             isInvalid={errors.AddressLine2 ? true : false}
@@ -221,7 +219,7 @@ export default function Create() {
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>City</Form.Label>
                                         <Form.Control 
-                                            className={stylesForCreate.formInput} 
+                                            className={styles.formInput} 
                                             type="text"
                                             {...register('City', { required: true})}
                                             isInvalid={errors.City ? true : false}
@@ -235,7 +233,7 @@ export default function Create() {
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>state</Form.Label>
                                         <Form.Select 
-                                            className={stylesForCreate.formInput} 
+                                            className={styles.formInput} 
                                             {...register('StateCode')}
                                             isInvalid={errors.StateCode ? true : false}
                                             >
@@ -249,7 +247,7 @@ export default function Create() {
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>zip</Form.Label>
                                         <Form.Control 
-                                            className={stylesForCreate.formInput} 
+                                            className={styles.formInput} 
                                             type="text"
                                             {...register('ZipCode', { required: true})}
                                             isInvalid={errors.ZipCode ? true : false}
@@ -261,7 +259,7 @@ export default function Create() {
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>time zone</Form.Label>
                                         <Form.Select 
-                                            className={stylesForCreate.formInput} 
+                                            className={styles.formInput} 
                                             {...register('TimeZoneId')}
                                             isInvalid={errors.TimeZoneId ? true : false}
                                             >
@@ -280,7 +278,7 @@ export default function Create() {
                                         <Form.Group className={[styles.formGroup].join(' ')}>
                                             <Form.Label>Legal Name</Form.Label>
                                             <Form.Control 
-                                                className={stylesForCreate.formInput} 
+                                                className={styles.formInput} 
                                                 type="text"
                                                 {...register('LegalName', { required: true})}
                                                 isInvalid={errors.LegalName ? true : false}
@@ -292,7 +290,7 @@ export default function Create() {
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>Address Line 1</Form.Label>
                                         <Form.Control 
-                                            className={stylesForCreate.formInput} 
+                                            className={styles.formInput} 
                                             type="text"
                                             {...register('LegalAddressLine1', { required: true})}
                                             isInvalid={errors.LegalAddressLine1 ? true : false}
@@ -304,7 +302,7 @@ export default function Create() {
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>Address Line 2</Form.Label>
                                         <Form.Control 
-                                            className={stylesForCreate.formInput} 
+                                            className={styles.formInput} 
                                             type="text"
                                             {...register('LegalAddressLine2', { required: false})}
                                             isInvalid={errors.LegalAddressLine2 ? true : false}
@@ -317,7 +315,7 @@ export default function Create() {
                                         <Form.Group className={[styles.formGroup].join(' ')}>
                                             <Form.Label>City</Form.Label>
                                             <Form.Control 
-                                                className={stylesForCreate.formInput} 
+                                                className={styles.formInput} 
                                                 type="text"
                                                 {...register('LegalCity', { required: false})}
                                                 isInvalid={errors.LegalCity ? true : false}
@@ -328,7 +326,7 @@ export default function Create() {
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>state</Form.Label>
                                         <Form.Select 
-                                            className={stylesForCreate.formInput} 
+                                            className={styles.formInput} 
                                             {...register('LegalStateCode')}
                                             isInvalid={errors.LegalStateCode ? true : false}
                                             >
@@ -342,7 +340,7 @@ export default function Create() {
                                     <Form.Group className={[styles.formGroup].join(' ')}>
                                         <Form.Label>zip</Form.Label>
                                         <Form.Control 
-                                            className={stylesForCreate.formInput} 
+                                            className={styles.formInput} 
                                             type="text"
                                             {...register('LegalZipCode', { required: false})}
                                             isInvalid={errors.LegalZipCode ? true : false}
@@ -358,7 +356,7 @@ export default function Create() {
                                         <Form.Group className={[styles.formGroup].join(' ')}>
                                             <Form.Label>Graylist Enforcement</Form.Label>
                                             <Form.Select 
-                                                className={stylesForCreate.formInput} 
+                                                className={styles.formInput} 
                                                 {...register('GraylistEnforcementTypeId')}
                                                 isInvalid={errors.GraylistEnforcementTypeId ? true : false}
                                                 >
@@ -372,7 +370,7 @@ export default function Create() {
                                         <Form.Group className={[styles.formGroup].join(' ')}>
                                             <Form.Label>Days Until Expiration</Form.Label>
                                             <Form.Control 
-                                                className={stylesForCreate.formInput}
+                                                className={styles.formInput}
                                                 defaultValue="180" 
                                                 type="number"
                                                 {...register('GraylistExpirationDays', { required: false})}
@@ -384,7 +382,7 @@ export default function Create() {
                                         <Form.Group className={[styles.formGroup].join(' ')}>
                                             <Form.Label>Account Block Threshold</Form.Label>
                                             <Form.Control 
-                                                className={stylesForCreate.formInput} 
+                                                className={styles.formInput} 
                                                 type="number"
                                                 defaultValue="2"
                                                 {...register('GraylistBlockThreshold', { required: false})}
@@ -407,7 +405,7 @@ export default function Create() {
                                             <Form.Group className={[styles.formGroup].join(' ')}>
                                                 <Form.Label>Select Funding Type</Form.Label>
                                                 <Form.Select 
-                                                    className={stylesForCreate.formInput} 
+                                                    className={styles.formInput} 
                                                     {...register('BillingGroupFundingTypeId')}
                                                     isInvalid={errors.BillingGroupFundingTypeId ? true : false}
                                                     >
@@ -421,7 +419,7 @@ export default function Create() {
                                         <Form.Group className={[styles.formGroup].join(' ')}>
                                             <Form.Label>Batch Close Time</Form.Label>
                                             <Form.Control 
-                                                className={stylesForCreate.formInput} 
+                                                className={styles.formInput} 
                                                 type="time"
                                                 {...register('BatchCloseTime', { required: false})}
                                                 isInvalid={errors.BatchCloseTime ? true : false}
@@ -432,7 +430,7 @@ export default function Create() {
                                         <Form.Group className={[styles.formGroup].join(' ')}>
                                             <Form.Label>Business Days until Disbursement</Form.Label>
                                             <Form.Control 
-                                                className={stylesForCreate.formInput} 
+                                                className={styles.formInput} 
                                                 type="text"
                                                 {...register('BusinessDaysUntilDisbursement', { required: false})}
                                                 isInvalid={errors.BusinessDaysUntilDisbursement ? true : false}
@@ -445,7 +443,7 @@ export default function Create() {
                                             <Form.Group className={[styles.formGroup].join(' ')}>
                                                 <Form.Label>Business Days to Delay Credits</Form.Label>
                                                 <Form.Control 
-                                                    className={stylesForCreate.formInput} 
+                                                    className={styles.formInput} 
                                                     type="text"
                                                     {...register('BusinessDaysToDelayCredits', { required: false})}
                                                     isInvalid={errors.BusinessDaysToDelayCredits ? true : false}
@@ -456,7 +454,7 @@ export default function Create() {
                                             <Form.Group className={[styles.formGroup].join(' ')}>
                                                 <Form.Label>Business Days To Delay Refunds</Form.Label>
                                                 <Form.Control 
-                                                    className={stylesForCreate.formInput} 
+                                                    className={styles.formInput} 
                                                     type="text"
                                                     {...register('BusinessDaysToDelayRefunds', { required: false})}
                                                     isInvalid={errors.BusinessDaysToDelayRefunds ? true : false}
@@ -488,7 +486,7 @@ export default function Create() {
                                             <Form.Group className={[styles.formGroup].join(' ')}>
                                                 <Form.Label>Override Company Id</Form.Label>
                                                 <Form.Control 
-                                                    className={stylesForCreate.formInput} 
+                                                    className={styles.formInput} 
                                                     type="text"
                                                     {...register('OverrideCompanyId', { required: false})}
                                                     isInvalid={errors.OverrideCompanyId ? true : false}
@@ -506,7 +504,7 @@ export default function Create() {
                                         <Form.Group className={[styles.formGroup].join(' ')}>
                                             <Form.Label>Expected Annual Volume</Form.Label>
                                             <Form.Control 
-                                                className={stylesForCreate.formInput} 
+                                                className={styles.formInput} 
                                                 type="number"
                                                 {...register('ExpectedAnnualVolume', { min: .01, required: true})}
                                                 isInvalid={errors.ExpectedAnnualVolume ? true : false}
@@ -518,7 +516,7 @@ export default function Create() {
                                         <Form.Group className={[styles.formGroup].join(' ')}>
                                             <Form.Label>Expected Average Transaction Amount</Form.Label>
                                             <Form.Control 
-                                                className={stylesForCreate.formInput} 
+                                                className={styles.formInput} 
                                                 type="number"
                                                 {...register('ExpectedAverageTransactionAmount', {min: .01, required: true})}
                                                 isInvalid={errors.ExpectedAverageTransactionAmount ? true : false}
@@ -530,7 +528,7 @@ export default function Create() {
                                         <Form.Group className={[styles.formGroup].join(' ')}>
                                             <Form.Label>Average No. of Transactions per Month</Form.Label>
                                             <Form.Control 
-                                                className={stylesForCreate.formInput} 
+                                                className={styles.formInput} 
                                                 type="text"
                                                 {...register('ExpectedMonthlyTransactionCount', {min: .01, required: true})}
                                                 isInvalid={errors.ExpectedMonthlyTransactionCount ? true : false}
@@ -544,7 +542,7 @@ export default function Create() {
                                         <Form.Group className={[styles.formGroup].join(' ')}>
                                             <Form.Label>Daily Batch Processing Limit</Form.Label>
                                             <Form.Control 
-                                                className={stylesForCreate.formInput} 
+                                                className={styles.formInput} 
                                                 type="text"
                                                 {...register('DailyBatchProcessingLimit', { required: false})}
                                                 isInvalid={errors.DailyBatchProcessingLimit ? true : false}
@@ -555,7 +553,7 @@ export default function Create() {
                                         <Form.Group className={[styles.formGroup].join(' ')}>
                                             <Form.Label>Monthly Batch Processing Limit</Form.Label>
                                             <Form.Control 
-                                                className={stylesForCreate.formInput} 
+                                                className={styles.formInput} 
                                                 type="text"
                                                 {...register('MonthlyBatchProcessingLimit', { required: false})}
                                                 isInvalid={errors.MonthlyBatchProcessingLimit ? true : false}
@@ -571,7 +569,7 @@ export default function Create() {
                                         <Form.Group className={[styles.formGroup].join(' ')}>
                                             <Form.Label>Setup Fee Amount</Form.Label>
                                             <Form.Control 
-                                                className={stylesForCreate.formInput} 
+                                                className={styles.formInput} 
                                                 type="number"
                                                 {...register('SetupFeeAmount', { required: false})}
                                                 isInvalid={errors.SetupFeeAmount ? true : false}
@@ -582,7 +580,7 @@ export default function Create() {
                                         <Form.Group className={[styles.formGroup].join(' ')}>
                                             <Form.Label>Monthly Fee Amount</Form.Label>
                                             <Form.Control 
-                                                className={stylesForCreate.formInput} 
+                                                className={styles.formInput} 
                                                 type="number"
                                                 {...register('MonthlyFeeAmount', { required: false})}
                                                 isInvalid={errors.MonthlyFeeAmount ? true : false}
@@ -608,7 +606,7 @@ export default function Create() {
                                         <Form.Group className={[styles.formGroup].join(' ')}>
                                             <Form.Label>Base Transaction Expense Rate</Form.Label>
                                             <Form.Control 
-                                                className={stylesForCreate.formInput} 
+                                                className={styles.formInput} 
                                                 type="number"
                                                 defaultValue={0.0800}
                                                 {...register('BaseTransactionExpenseRate', { required: false})}
@@ -620,7 +618,7 @@ export default function Create() {
                                         <Form.Group className={[styles.formGroup].join(' ')}>
                                             <Form.Label>Verified Transaction Expense Rate</Form.Label>
                                             <Form.Control 
-                                                className={stylesForCreate.formInput} 
+                                                className={styles.formInput} 
                                                 type="number"
                                                 defaultValue={0.25}
                                                 {...register('VerifiedTransactionExpenseRate', { required: false})}
@@ -632,7 +630,7 @@ export default function Create() {
                                         <Form.Group className={[styles.formGroup].join(' ')}>
                                             <Form.Label>Unauthorized Return Expense Rate</Form.Label>
                                             <Form.Control 
-                                                className={stylesForCreate.formInput} 
+                                                className={styles.formInput} 
                                                 type="number"
                                                 {...register('ReturnExpenseRate', { required: false})}
                                                 isInvalid={errors.ReturnExpenseRate ? true : false}
@@ -645,7 +643,7 @@ export default function Create() {
                                         <Form.Group className={[styles.formGroup].join(' ')}>
                                             <Form.Label>Monthly Fee Amount</Form.Label>
                                             <Form.Control 
-                                                className={stylesForCreate.formInput} 
+                                                className={styles.formInput} 
                                                 type="number"
                                                 {...register('UnauthorizedReturnExpenseRate', { required: false})}
                                                 isInvalid={errors.UnauthorizedReturnExpenseRate ? true : false}
@@ -661,7 +659,7 @@ export default function Create() {
                                         <Form.Group className={[styles.formGroup].join(' ')}>
                                             <Form.Label>Contact Name</Form.Label>
                                             <Form.Control 
-                                                className={stylesForCreate.formInput} 
+                                                className={styles.formInput} 
                                                 type="text"
                                                 {...register('ContactName', { required: true})}
                                                 isInvalid={errors.ContactName ? true : false}
@@ -673,7 +671,7 @@ export default function Create() {
                                         <Form.Group className={[styles.formGroup].join(' ')}>
                                             <Form.Label>Email Address</Form.Label>
                                             <Form.Control 
-                                                className={stylesForCreate.formInput} 
+                                                className={styles.formInput} 
                                                 type="text"
                                                 {...register('ContactEmail', { required: true})}
                                                 isInvalid={errors.ContactEmail ? true : false}
@@ -685,7 +683,7 @@ export default function Create() {
                                         <Form.Group className={[styles.formGroup].join(' ')}>
                                             <Form.Label>Phone Number</Form.Label>
                                             <Form.Control 
-                                                className={stylesForCreate.formInput} 
+                                                className={styles.formInput} 
                                                 type="text"
                                                 {...register('ContactPhoneNumber', { required: true})}
                                                 isInvalid={errors.ContactPhoneNumber ? true : false}
@@ -702,7 +700,6 @@ export default function Create() {
                                 {/* This section needs more clarity as to what its for and how it should interact inside this form */}
                             </div>
                         </div>
-                    </div>
                 </div>
                 <Button type="submit">Create</Button>
             </Form>
@@ -712,6 +709,6 @@ export default function Create() {
 
 
 {/* <Form.Group>
-<Form.Label className={stylesForCreate.label}></Form.Label>
+<Form.Label className={styles.label}></Form.Label>
 <Form.Control></Form.Control>
 </Form.Group> */}
