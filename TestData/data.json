@@ -1,4 +1,4 @@
-export const testData = [
+[
     {
     "uid": 1,
     "BusinessName": "ABC Company",
